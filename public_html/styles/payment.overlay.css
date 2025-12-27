@@ -1,0 +1,107 @@
+/* =========================================================
+   SELENNIA — OVERLAY ACQUISITION
+========================================================= */
+
+.selennia-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.selennia-overlay.is-visible {
+  pointer-events: auto;
+}
+
+/* Fond sombre */
+.overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+}
+
+/* Carte centrale */
+.overlay-panel {
+  position: relative;
+  background: #ffffff;
+  color: #121212;
+  border-radius: 22px;
+  width: min(92vw, 420px);
+  padding: 28px;
+  z-index: 2;
+  box-shadow: 0 40px 120px rgba(0,0,0,.35);
+
+  transform: translateY(20px) scale(.96);
+  opacity: 0;
+  transition: all .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.selennia-overlay.is-visible .overlay-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Bouton fermer */
+.overlay-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Texte */
+.overlay-kicker {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.overlay-title {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.overlay-price {
+  font-weight: 600;
+  color: #9a7b3f;
+  margin-bottom: 16px;
+}
+
+/* Actions */
+.overlay-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.overlay-primary {
+  flex: 1;
+  background: #121212;
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.overlay-secondary {
+  background: none;
+  border: 1px solid rgba(0,0,0,.15);
+  padding: 12px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Bloque le scroll */
+body.overlay-open {
+  overflow: hidden;
+}

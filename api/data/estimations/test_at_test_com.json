@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "created_at": "2025-12-20T08:22:17.306160",
+    "source": "selennia-2035"
+  },
+  "user": {
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test@test.com",
+    "phone": "0687890987"
+  },
+  "item": {
+    "category": "",
+    "description": "",
+    "filename": "bateau_et_pecheurs.png"
+  },
+  "result": {
+    "scene": {
+      "opening": "L'œuvre présentée est un petit dessin ou aquarelle encadré, représentant une scène de paysage côtier avec un bateau échoué et quelques personnages.",
+      "analysis": "La composition est sobre, centrée sur un sujet maritime traité avec une palette très limitée, probablement à l'encre ou au crayon rehaussé d'aquarelle. Le cadre en bois doré, avec passe-partout, suggère une volonté de mise en valeur classique. L'ensemble évoque une production du XIXe siècle, typique de l'école européenne, mais sans éléments distinctifs permettant une attribution précise.",
+      "projection": "La valeur de ce type d'œuvre dépend fortement de l'auteur, de la provenance et de l'état de conservation. En l'absence d'informations complémentaires, il convient d'adopter une estimation prudente, typique pour un dessin anonyme ou d'école mineure de cette période."
+    },
+    "visual_analysis": {
+      "materials": "Dessin ou aquarelle sur papier, encadrement bois doré avec passe-partout.",
+      "period_estimation": "Probablement XIXe siècle, école européenne.",
+      "condition": "Apparence saine, encadrement récent, pas de défauts visibles sur l'œuvre.",
+      "confidence": 0.6
+    },
+    "value_range": {
+      "min": 80,
+      "max": 250,
+      "currency": "EUR"
+    },
+    "disclaimer": "Cette estimation est fondée uniquement sur l'analyse visuelle de l'image, sans examen physique ni informations sur la provenance ou l'auteur. Une expertise approfondie pourrait modifier sensiblement cette évaluation."
+  }
+}

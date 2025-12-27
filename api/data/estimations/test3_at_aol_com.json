@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "created_at": "2025-12-20T08:38:41.740798",
+    "source": "selennia-2035"
+  },
+  "user": {
+    "first_name": "paul",
+    "last_name": "paul",
+    "email": "test3@aol.com",
+    "phone": "9876865778"
+  },
+  "item": {
+    "category": "",
+    "description": "",
+    "filename": "IMG_2170.jpg"
+  },
+  "result": {
+    "scene": {
+      "opening": "L’œuvre présentée est un tableau encadré représentant une figure stylisée, réalisée dans une technique mixte évoquant le collage ou l’assemblage de matériaux texturés.",
+      "analysis": "La composition centrale met en avant une figure anthropomorphe, probablement inspirée de l’art populaire ou naïf. La texture en relief, obtenue par l’accumulation de petits éléments colorés, confère à l’ensemble une dimension tactile et expressive. Le choix du cadre noir, sobre, met en valeur la vivacité des couleurs et la singularité du sujet. L’absence de signature visible et le style éclectique suggèrent une œuvre contemporaine, possiblement issue d’un atelier d’art brut ou outsider.",
+      "projection": "Sur le marché actuel, ce type de création, bien que singulière et décorative, reste généralement dans une fourchette de valeur modérée, sauf identification d’un auteur reconnu."
+    },
+    "visual_analysis": {
+      "materials": "Assemblage de matériaux divers, probablement perles, sequins ou éléments similaires collés sur support cartonné ou papier, encadrement sous verre avec passe-partout.",
+      "period_estimation": "Contemporain, probablement XXIe siècle.",
+      "condition": "Très bon état apparent, encadrement récent, aucune altération visible.",
+      "confidence": 0.7
+    },
+    "value_range": {
+      "min": 40,
+      "max": 120,
+      "currency": "EUR"
+    },
+    "disclaimer": "Cette estimation repose uniquement sur l’analyse visuelle de l’image fournie et ne saurait se substituer à une expertise physique approfondie ou à l’identification de l’artiste."
+  }
+}

@@ -1,0 +1,97 @@
+/* =========================================================
+   LAYOUT GLOBAL — SELENNIA 2035
+========================================================= */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#analysis {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0b0c0d;
+}
+
+/* =========================================================
+   MODE HOME / CATÉGORIES / PRODUITS
+========================================================= */
+
+#analysis.is-home {
+  overflow: hidden;
+}
+
+/* =========================================================
+   CAROUSELS — STRUCTURE COMMUNE
+========================================================= */
+
+.category-panels,
+.product-panels {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+}
+
+/* supprime scrollbar visuelle */
+.category-panels::-webkit-scrollbar,
+.product-panels::-webkit-scrollbar {
+  display: none;
+}
+
+.category-panels,
+.product-panels {
+  scrollbar-width: none;
+}
+
+/* =========================================================
+   PANNEAUX — COMPORTEMENT
+========================================================= */
+
+.category-panel,
+.product-panel {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   BOUTONS RETOUR — FIXES
+========================================================= */
+
+.categories-back,
+.catalogue-back {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  z-index: 20;
+}
+
+/* =========================================================
+   RESPIRATION VISUELLE (INDICE DE CONTINUITÉ)
+========================================================= */
+
+@media (min-width: 900px) {
+  .category-panels::after,
+  .product-panels::after {
+    content: "";
+    flex: 0 0 12vw;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .category-panels,
+  .product-panels {
+    flex-direction: column;
+  }
+}

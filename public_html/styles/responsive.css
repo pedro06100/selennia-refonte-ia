@@ -1,0 +1,468 @@
+/* =========================================================
+   SELENNIA — RESPONSIVE MOBILE & TABLETTE
+   À charger en dernier avant Snipcart
+========================================================= */
+
+/* =========================================================
+   BASE — TOUS ÉCRANS (FIX OVERFLOW)
+========================================================= */
+html,
+body {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+#analysis,
+#analysis.is-home,
+#analysis.analysis-stage {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* =========================================================
+   DESKTOP (> 1024px)
+========================================================= */
+@media (min-width: 1025px) {
+  .category-panels,
+  .product-panels {
+    display: flex !important;
+    flex-direction: row !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  .category-panel {
+    flex: 1 !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .category-panel.is-active {
+    flex: 3 !important;
+  }
+
+  .product-panel {
+    flex: 0 0 22vw !important;
+    min-width: 22vw !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .product-panel.is-active {
+    flex: 0 0 56vw !important;
+  }
+}
+
+/* =========================================================
+   TABLETTE PAYSAGE (769px - 1024px)
+========================================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .category-panels,
+  .product-panels {
+    display: flex !important;
+    flex-direction: row !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  .category-panel {
+    flex: 1 !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .category-panel.is-active {
+    flex: 2.5 !important;
+  }
+
+  .product-panel {
+    flex: 0 0 35vw !important;
+    min-width: 35vw !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .product-panel.is-active {
+    flex: 0 0 65vw !important;
+  }
+
+  /* Textes */
+  .panel-title {
+    font-size: clamp(24px, 3vw, 36px) !important;
+  }
+
+  .panel-description {
+    font-size: 14px !important;
+  }
+
+  .panel-content {
+    left: 32px !important;
+    right: 32px !important;
+    bottom: 40px !important;
+  }
+
+  /* Artwork produit */
+  .panel-artwork {
+    width: 80% !important;
+    height: 65% !important;
+    padding: 24px !important;
+  }
+}
+
+/* =========================================================
+   TABLETTE PORTRAIT (481px - 768px)
+========================================================= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .category-panels,
+  .product-panels {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  .category-panel {
+    flex: none !important;
+    width: 100% !important;
+    min-height: 30vh !important;
+    height: 30vh !important;
+  }
+
+  .category-panel.is-active {
+    min-height: 50vh !important;
+    height: 50vh !important;
+  }
+
+  .product-panel {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    min-height: 35vh !important;
+    height: 35vh !important;
+  }
+
+  .product-panel.is-active {
+    min-height: 55vh !important;
+    height: 55vh !important;
+  }
+
+  /* Labels */
+  .panel-label {
+    top: 20px !important;
+    right: 16px !important;
+  }
+
+  .panel-label span {
+    font-size: 12px !important;
+    letter-spacing: 0.3em !important;
+  }
+
+  /* Contenu */
+  .panel-content {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+  }
+
+  .panel-title {
+    font-size: clamp(20px, 4vw, 28px) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .panel-subtitle {
+    font-size: 13px !important;
+  }
+
+  .panel-description {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    display: -webkit-box !important;
+-webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .panel-index {
+    font-size: 11px !important;
+  }
+
+  /* Artwork produit */
+  .panel-artwork {
+    width: 70% !important;
+    height: 55% !important;
+    padding: 20px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Boutons */
+  .panel-enter,
+  .panel-action {
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+  }
+
+  .categories-back,
+  .catalogue-back {
+    top: 20px !important;
+    left: 20px !important;
+    font-size: 12px !important;
+  }
+
+  /* Prix */
+  .panel-price {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE (320px - 480px)
+========================================================= */
+@media (max-width: 480px) {
+  .category-panels,
+  .product-panels {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  .category-panel {
+    flex: none !important;
+    width: 100% !important;
+    min-height: 25vh !important;
+    height: 25vh !important;
+  }
+
+  .category-panel.is-active {
+    min-height: 45vh !important;
+    height: 45vh !important;
+  }
+
+  .product-panel {
+    flex: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    min-height: 30vh !important;
+    height: 30vh !important;
+  }
+
+  .product-panel.is-active {
+    min-height: 50vh !important;
+    height: 50vh !important;
+  }
+
+  /* Labels */
+  .panel-label {
+    top: 16px !important;
+    right: 12px !important;
+  }
+
+  .panel-label span {
+    font-size: 10px !important;
+    letter-spacing: 0.25em !important;
+  }
+
+  /* Contenu */
+  .panel-content {
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    padding: 16px 20px !important;
+  }
+
+  .panel-title {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .panel-subtitle {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .panel-description {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    margin-bottom: 12px !important;
+  }
+
+  .panel-index {
+    font-size: 10px !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Artwork produit */
+  .panel-artwork {
+    width: 65% !important;
+    height: 50% !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .product-panel.is-active .panel-artwork {
+    transform: scale(1.02) !important;
+  }
+
+  /* Boutons */
+  .panel-enter,
+  .panel-action {
+    padding: 10px 16px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .categories-back,
+  .catalogue-back {
+    top: 16px !important;
+    left: 16px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  /* Prix */
+  .panel-price {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Overlay produit */
+  .product-panel.is-active .panel-content {
+    padding: 16px 18px !important;
+    border-radius: 12px !important;
+  }
+
+  /* Estimation */
+  .estimation {
+    padding: 32px 16px !important;
+  }
+
+  .estimation-card {
+    padding: 24px 20px !important;
+  }
+
+  .estimation-title {
+    font-size: 22px !important;
+  }
+
+  .estimation-subtitle {
+    font-size: 13px !important;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* =========================================================
+   TRÈS PETIT ÉCRAN (< 320px)
+========================================================= */
+@media (max-width: 319px) {
+  .category-panel {
+    min-height: 22vh !important;
+    height: 22vh !important;
+  }
+
+  .category-panel.is-active {
+    min-height: 40vh !important;
+    height: 40vh !important;
+  }
+
+  .panel-title {
+    font-size: 16px !important;
+  }
+
+  .panel-description {
+    display: none !important;
+  }
+
+  .panel-label span {
+    font-size: 9px !important;
+  }
+}
+
+/* =========================================================
+   ORIENTATION PAYSAGE MOBILE
+========================================================= */
+@media (max-width: 900px) and (orientation: landscape) {
+  .category-panels,
+  .product-panels {
+    flex-direction: row !important;
+    height: 100vh !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  .category-panel {
+    flex: 1 !important;
+    width: auto !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .category-panel.is-active {
+    flex: 2 !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .product-panel {
+    flex: 0 0 40vw !important;
+    min-width: 40vw !important;
+    width: auto !important;
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  .product-panel.is-active {
+    flex: 0 0 70vw !important;
+  }
+
+  .panel-content {
+    bottom: 20px !important;
+  }
+
+  .panel-description {
+    -webkit-line-clamp: 2 !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITÉ — RÉDUCTION DES ANIMATIONS
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   MODE SOMBRE FORCÉ (pour cohérence)
+========================================================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0b0c0d !important;
+    color: #ffffff !important;
+  }
+}

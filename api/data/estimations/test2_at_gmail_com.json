@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "created_at": "2025-12-20T08:34:01.089494",
+    "source": "selennia-2035"
+  },
+  "user": {
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test2@gmail.com",
+    "phone": "9898765434"
+  },
+  "item": {
+    "category": "",
+    "description": "",
+    "filename": "drapeau_vaudou.png"
+  },
+  "result": {
+    "scene": {
+      "opening": "Première impression d’une œuvre encadrée, à la composition figurative stylisée, dominée par des couleurs vives et des textures en relief.",
+      "analysis": "L’objet présente une figure anthropomorphe simplifiée, réalisée à partir de matériaux colorés appliqués en surface. L’approche naïve et la technique évoquent une démarche contemporaine, possiblement liée à l’art brut ou outsider. Le cadre noir et le passe-partout blanc suggèrent une présentation soignée, adaptée à la valorisation d’un travail artistique singulier. L’absence de signature visible ou d’éléments de datation limite l’attribution précise.",
+      "projection": "La valeur de ce type d’œuvre dépend fortement de l’auteur, du contexte de création et de la reconnaissance institutionnelle. En l’absence d’éléments distinctifs, la projection reste prudente et se situe dans une fourchette modeste pour une pièce contemporaine encadrée, non attribuée."
+    },
+    "visual_analysis": {
+      "materials": "Assemblage de matériaux colorés, probablement éclats de verre, perles ou résine, sur support plat, encadrement bois noir.",
+      "period_estimation": "Contemporain, XXIe siècle.",
+      "condition": "Très bon état apparent, sans altération visible.",
+      "confidence": 0.65
+    },
+    "value_range": {
+      "min": 80,
+      "max": 250,
+      "currency": "EUR"
+    },
+    "disclaimer": "Cette estimation repose uniquement sur l’analyse visuelle de l’image, sans examen physique ni informations complémentaires sur la provenance ou l’auteur."
+  }
+}

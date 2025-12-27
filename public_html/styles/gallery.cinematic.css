@@ -1,0 +1,23 @@
+/* =========================================================
+   GALERIE CINEMATIC — SALLE SELENNIA
+   Neutralisation de l’ancien carrousel
+========================================================= */
+
+/* Désactivation des effets cartes */
+.gallery-card,
+.artwork {
+  perspective: none;
+  transform-style: flat;
+}
+
+/* Pas d’empilement */
+.gallery-card {
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Désactivation effets Netflix-like */
+.gallery-card::before,
+.gallery-card::after {
+  display: none;
+}

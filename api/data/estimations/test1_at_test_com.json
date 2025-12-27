@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "created_at": "2025-12-20T08:25:26.237050",
+    "source": "selennia-2035"
+  },
+  "user": {
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test1@test.com",
+    "phone": "9876546543"
+  },
+  "item": {
+    "category": "",
+    "description": "",
+    "filename": "assiettes_limoges.PNG"
+  },
+  "result": {
+    "scene": {
+      "opening": "Ensemble de quatre assiettes blanches à bordure dorée, décorées d’un monogramme ou motif stylisé en or, à la ligne sobre et élégante.",
+      "analysis": "L’objet présente une porcelaine fine, probablement de fabrication industrielle de qualité. Le décor doré, discret et raffiné, évoque une production du XXe siècle, possiblement milieu ou seconde moitié, dans un style classique intemporel. L’absence de marques visibles ou de décor figuratif suggère une série destinée à un usage de table élégant plutôt qu’à la collection muséale. L’état général semble excellent, sans éclats ni usure apparente.",
+      "projection": "La valeur de ce type d’ensemble dépend fortement de la marque, de l’époque précise et de la demande pour les arts de la table classiques. Sans marque ni contexte, la projection reste prudente et modérée."
+    },
+    "visual_analysis": {
+      "materials": "Porcelaine blanche, décor or",
+      "period_estimation": "Milieu à fin XXe siècle",
+      "condition": "Très bon état apparent",
+      "confidence": 0.65
+    },
+    "value_range": {
+      "min": 40,
+      "max": 120,
+      "currency": "EUR"
+    },
+    "disclaimer": "Cette estimation repose uniquement sur l’analyse visuelle de l’image, sans examen physique ni identification de marque. Une expertise approfondie pourrait modifier ces conclusions."
+  }
+}

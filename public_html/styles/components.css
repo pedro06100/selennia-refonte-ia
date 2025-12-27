@@ -1,0 +1,638 @@
+/* =========================================================
+   BASE COMMUNE — ÉDITORIAL NOIR & BLANC
+========================================================= */
+
+.panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.75)
+  );
+}
+
+/* Label vertical (catégories + produits) */
+.panel-label {
+  position: absolute;
+  top: 36px;
+  right: 20px;
+  z-index: 4;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  pointer-events: none;
+  opacity: .9;
+}
+
+.panel-label span {
+  font-size: 14px;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.95);
+  text-shadow: 0 2px 12px rgba(0,0,0,.6);
+  mix-blend-mode: difference;
+}
+
+/* =========================================================
+   CATÉGORIES — PANNEAUX ÉDITORIAUX
+========================================================= */
+
+.category-panels {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #0b0c0d;
+  overflow: hidden;
+}
+
+.category-panel {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%) contrast(1.05);
+  transition:
+    flex .9s cubic-bezier(.2,.8,.2,1),
+    filter .6s ease;
+}
+
+.category-panel.is-active {
+  flex: 3;
+  filter: grayscale(0%) contrast(1);
+}
+
+.category-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+  z-index: 3;
+}
+
+.category-panel:last-child::after {
+  display: none;
+}
+
+.category-panel .panel-content {
+  position: absolute;
+  bottom: 64px;
+  left: 48px;
+  right: 48px;
+  z-index: 2;
+
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.category-panel.is-active .panel-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   PRODUITS — CAROUSEL ŒUVRES
+========================================================= */
+
+.product-panels {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #0b0c0d;
+  overflow: hidden;
+}
+
+/* =========================================================
+   PANNEAU PRODUIT — PASSIF / ACTIF
+========================================================= */
+
+.product-panel {
+  position: relative;
+  flex: 0 0 22vw;
+  min-width: 22vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%) contrast(.95);
+  opacity: .45;
+
+  transition:
+    flex 1s cubic-bezier(.2,.8,.2,1),
+    filter .6s ease,
+    opacity .6s ease;
+}
+
+.product-panel.is-active {
+  flex: 0 0 56vw;
+  opacity: 1;
+  filter: none;
+  z-index: 5;
+}
+
+.product-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+  z-index: 3;
+}
+
+.product-panel:last-child::after {
+  display: none;
+}
+
+/* =========================================================
+   CADRE MUSÉAL — IMAGE PRODUIT
+========================================================= */
+
+.product-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 1;
+}
+
+.product-panel.is-active::before {
+  background: rgba(0,0,0,.15);
+}
+
+.product-panel .panel-artwork {
+  position: relative;
+  z-index: 2;
+
+  width: 72%;
+  height: 72%;
+
+  background: #f6f4ef;
+  border-radius: 18px;
+  padding: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(0,0,0,.05);
+
+  transition: transform .8s ease;
+}
+
+.product-panel.is-active .panel-artwork {
+  transform: scale(1.06);
+}
+
+.product-panel .panel-artwork img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* =========================================================
+   FICHE PRODUIT — SOCLE ÉDITORIAL + TEXTE
+========================================================= */
+
+.product-panel .panel-content {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  z-index: 4;
+
+  max-width: 520px;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.product-panel.is-active .panel-content {
+  opacity: 1;
+  transform: translateY(0);
+
+  /* SOCLE DE LECTURE */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.35)
+  );
+  backdrop-filter: blur(2px);
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+
+/* =========================================================
+   TEXTE FICHE PRODUIT
+========================================================= */
+
+.panel-title {
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.45);
+}
+
+.panel-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.85);
+  max-width: 56ch;
+  margin-bottom: 20px;
+}
+
+.panel-details {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 22px;
+}
+
+.panel-price {
+  font-size: 22px;
+  font-weight: 500;
+  color: #f3e7c3;
+  margin-bottom: 28px;
+}
+
+/* CTA */
+.panel-action {
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,.45);
+
+  background: rgba(212,175,55,.14);
+  color: #f3e7c3;
+
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.panel-action:hover {
+  background: rgba(212,175,55,.22);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   BOUTONS RETOUR
+========================================================= */
+
+.categories-back,
+.catalogue-back {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  z-index: 10;
+
+  background: none;
+  border: none;
+
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+
+  cursor: pointer;
+  transition: color .25s ease, transform .25s ease;
+}
+
+.categories-back:hover,
+.catalogue-back:hover {
+  color: rgba(255,255,255,.95);
+  transform: translateX(-4px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .category-panels,
+  .product-panels {
+    flex-direction: column;
+  }
+
+  .category-panel,
+  .product-panel {
+    flex: none;
+    min-width: 100%;
+    height: 25vh;
+  }
+
+  .category-panel.is-active,
+  .product-panel.is-active {
+    height: 45vh;
+  }
+
+  .panel-content {
+    left: 28px;
+    right: 28px;
+    bottom: 32px;
+  }
+
+  .panel-label {
+    top: 22px;
+    right: 14px;
+  }
+
+  .panel-label span {
+    font-size: 12px;
+    letter-spacing: .36em;
+  }
+}
+/* =========================================================
+   ESTIMATION — SCÈNE GLOBALE
+========================================================= */
+
+.estimation {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 64px 24px;
+  background:
+    radial-gradient(
+      900px 500px at 50% 0%,
+      rgba(212,175,55,0.08),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #0b0f14,
+      #090c10
+    );
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.estimation-header {
+  text-align: center;
+  margin-bottom: 42px;
+  max-width: 640px;
+}
+
+.estimation-title {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.estimation-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CARTE CENTRALE
+========================================================= */
+
+.estimation-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(15,17,20,0.92);
+  border-radius: 22px;
+  padding: 34px 32px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.6),
+    inset 0 0 0 1px rgba(255,255,255,.04);
+}
+
+/* =========================================================
+   TITRE ÉTAPE
+========================================================= */
+
+.estimation-step-title {
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(212,175,55,.85);
+  margin-bottom: 26px;
+}
+
+/* =========================================================
+   FORMULAIRE
+========================================================= */
+
+.estimation-form {
+  display: grid;
+  gap: 20px;
+}
+
+.field span {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: rgba(212,175,55,.6);
+  background: rgba(255,255,255,.06);
+}
+
+/* =========================================================
+   TEXTE LÉGAL
+========================================================= */
+
+.estimation-legal {
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  line-height: 1.5;
+}
+
+/* =========================================================
+   BOUTON
+========================================================= */
+
+.estimation-submit {
+  margin-top: 12px;
+  background: linear-gradient(
+    135deg,
+    #d4af37,
+    #bfa24a
+  );
+  color: #0b0f14;
+  border: none;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.estimation-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212,175,55,.25);
+}
+/* =========================================================
+   LOADER — ANALYSE SELENNIA
+========================================================= */
+
+.estimation-loader {
+  text-align: center;
+}
+
+.loader-ring {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.12);
+  border-top-color: rgba(212,175,55,.9);
+  animation: spin 1.2s linear infinite;
+}
+
+.loader-title {
+  font-size: 15px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+/* =========================================================
+   RENDU ESTIMATION — SELENNIA
+========================================================= */
+
+.estimation-result {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.estimation-section {
+  margin-bottom: 42px;
+}
+
+.section-title {
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(212,175,55,.85);
+  margin-bottom: 14px;
+}
+
+.section-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.92);
+}
+
+/* Liste visuelle */
+
+.visual-list {
+  margin-top: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.visual-list li {
+  font-size: 14px;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 6px;
+}
+
+/* Valeur mise en scène */
+
+.estimation-value {
+  margin: 56px 0 32px;
+  padding: 28px;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(212,175,55,.15),
+    rgba(255,255,255,.02)
+  );
+  box-shadow: 0 30px 70px rgba(0,0,0,.6);
+}
+
+.value-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(212,175,55,.85);
+  margin-bottom: 10px;
+}
+
+.value-amount {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.value-confidence {
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+}
+
+/* Disclaimer */
+
+.estimation-disclaimer {
+  font-size: 12px;
+  color: rgba(255,255,255,.45);
+  line-height: 1.6;
+  margin-top: 28px;
+}
+
+/* Actions */
+
+.estimation-actions {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
